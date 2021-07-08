@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\SocialLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login/facebook', [SocialLoginController::class, 'loginWithFacebook'])->name('login.facebook');
+Route::get('/oauth/facebook/callback', [SocialLoginController::class, 'facebookCallback'])->name('login.facebook.callback');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

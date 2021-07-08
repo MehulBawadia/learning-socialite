@@ -51,6 +51,12 @@
                     {{ __('Log in') }}
                 </x-button>
             </div>
+
+            <div class="mt-8 text-center">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login.facebook') }}">
+                    {{ __('Login with Facebook') }}
+                </a>
+            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
