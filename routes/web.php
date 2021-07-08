@@ -21,6 +21,9 @@ Route::get('/', function () {
 Route::get('/login/facebook', [SocialLoginController::class, 'loginWithFacebook'])->name('login.facebook');
 Route::get('/oauth/facebook/callback', [SocialLoginController::class, 'facebookCallback'])->name('login.facebook.callback');
 
+Route::get('/login/google', [SocialLoginController::class, 'loginWithGoogle'])->name('login.google');
+Route::get('/oauth/google/callback', [SocialLoginController::class, 'googleCallback'])->name('login.google.callback');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

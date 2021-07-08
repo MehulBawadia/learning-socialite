@@ -57,6 +57,12 @@
                     {{ __('Login with Facebook') }}
                 </a>
             </div>
+
+            <div class="mt-8 text-center">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login.google') }}">
+                    {{ __('Login with Google') }}
+                </a>
+            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
